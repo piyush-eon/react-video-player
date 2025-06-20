@@ -1,0 +1,85 @@
+WEBVTT
+
+1
+00:00:00.160 --> 00:00:01.880
+Imagine you're a project manager and you
+
+2
+00:00:01.880 --> 00:00:03.600
+need to coordinate with teams that speak
+
+3
+00:00:03.600 --> 00:00:04.960
+different different languages with
+
+4
+00:00:04.960 --> 00:00:07.520
+respect to their work. Now imagine having
+
+5
+00:00:07.520 --> 00:00:09.520
+a universal translator that lets you say,
+
+6
+00:00:09.600 --> 00:00:11.760
+create a user dashboard in plain English
+
+7
+00:00:12.000 --> 00:00:13.880
+and it automatically translates your
+
+8
+00:00:13.880 --> 00:00:16.400
+request into each team's specialized
+
+9
+00:00:16.400 --> 00:00:19.040
+language. Without this translator, you
+
+10
+00:00:19.040 --> 00:00:21.240
+need to learn four different technical
+
+11
+00:00:21.240 --> 00:00:23.840
+languages. This is what Model Context
+
+12
+00:00:23.840 --> 00:00:26.800
+Protocol or MCP is all about. With MCP,
+
+13
+00:00:26.800 --> 00:00:28.920
+you speak human language once and it
+
+14
+00:00:28.920 --> 00:00:30.360
+handles all the technical. Technical
+
+15
+00:00:30.360 --> 00:00:32.320
+translation automatically. So basically
+
+16
+00:00:32.320 --> 00:00:34.480
+MCP standardizes this translation layer
+
+17
+00:00:34.480 --> 00:00:37.120
+so AI agents or LLMS can seamlessly talk
+
+18
+00:00:37.120 --> 00:00:40.080
+to databases, APIs, cloud services
+
+19
+00:00:40.160 --> 00:00:42.240
+and any other system without developers
+
+20
+00:00:42.240 --> 00:00:44.240
+having to build custom integrations for
+
+21
+00:00:44.240 --> 00:00:45.080
+each one of them.

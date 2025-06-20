@@ -1,18 +1,8 @@
 import React, { useRef } from "react";
 import VideoJS from "./videojs";
-import { buildSrc } from "@imagekit/react";
 
 const VideoJSPlayer = () => {
   const playerRef = useRef(null);
-
-  const urlEndpoint = "https://ik.imagekit.io/roadsidecoder";
-  const videoPath = "/yt/example.mp4";
-
-  const hlsUrl = buildSrc({
-    urlEndpoint,
-    src: `${videoPath}/ik-master.m3u8`,
-    transformation: [{ streamingResolutions: "240_360_480_720_1080" }],
-  });
 
   // Video.js configuration with HLS for quality switching
   const videoJsOptions = {
@@ -23,13 +13,23 @@ const VideoJSPlayer = () => {
     muted: true,
     sources: [
       {
-        // Using ImageKit's HLS manifest for demo purposes
-        src: hlsUrl,
+        // Using ImageKit's HLS manifest URL
+        src: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080,l-subtitles,i-yt/english.srt,l-end",
         type: "application/x-mpegURL",
       },
     ],
     poster:
       "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-thumbnail.jpg?tr=w-1200,h-680,so-5",
+
+    tracks: [
+      {
+        kind: "chapters",
+        src: "/chapters.vtt",
+        srclang: "en",
+        label: "Chapters",
+        default: true,
+      },
+    ],
   };
 
   const handlePlayerReady = (player) => {
@@ -55,14 +55,6 @@ const VideoJSPlayer = () => {
 
       <div style={{ maxWidth: "800px" }}>
         <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-      </div>
-
-      <div style={{ marginTop: "10px", fontSize: "14px", color: "#666" }}>
-        <p>✅ Quality switching available (click gear icon)</p>
-        <p>❌ Requires complex setup (3 npm packages)</p>
-        <p>❌ Manual HLS manifest creation needed</p>
-        <p>❌ Server-side encoding infrastructure required</p>
-        <p>❌ Multiple encoded files needed for each quality</p>
       </div>
     </div>
   );
