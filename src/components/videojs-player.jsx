@@ -11,10 +11,12 @@ const VideoJSPlayer = () => {
     fluid: true,
     autoplay: false,
     muted: true,
+    playbackRates: [0.25, 0.5, 1, 1.5, 2],
     sources: [
       {
         // Using ImageKit's HLS manifest URL
-        src: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080,l-subtitles,i-yt/english.srt,l-end",
+        src: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080",
+        // src: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080,l-subtitles,i-yt/english.srt,l-end",
         type: "application/x-mpegURL",
       },
     ],
@@ -29,6 +31,20 @@ const VideoJSPlayer = () => {
         label: "Chapters",
         default: true,
       },
+      // {
+      //   kind: "captions",
+      //   src: "/english.vtt",
+      //   srclang: "en",
+      //   label: "English",
+      //   default: true,
+      // },
+      // {
+      //   kind: "captions",
+      //   src: "/hindi.vtt",
+      //   srclang: "hi",
+      //   label: "Hindi",
+      //   default: true,
+      // },
     ],
   };
 
