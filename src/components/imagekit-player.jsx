@@ -13,8 +13,7 @@ const ImageKitBasicPlayer = () => {
           width={800}
           height={450}
           transformation={[{ quality: 80 }, { format: "auto" }]}
-
-          //   poster="/yt/example.mp4/ik-thumbnail.jpg?tr=w-800,h-450"
+          poster="/yt/example.mp4/ik-thumbnail.jpg?tr=w-800,h-450"
         />
       </div>
     </ImageKitProvider>
